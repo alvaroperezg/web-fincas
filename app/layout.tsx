@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-const DOMAIN = "https://www.administracionfincasazuqueca.es";
+const DOMAIN = "https://fincasazuqueca.es";
 
 export const metadata: Metadata = {
   metadataBase: new URL(DOMAIN),
