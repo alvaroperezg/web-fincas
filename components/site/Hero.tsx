@@ -10,19 +10,25 @@ export default function Hero() {
           <Shield className="w-4 h-4 mr-2" /> Con Respaldo Legal Especializado
         </Badge>
         <h1 className="font-serif text-4xl md:text-6xl font-bold text-foreground mb-6">
-          Administración de Fincas
-          <span className="block text-primary">Profesional y Confiable</span>
+          Administración de Fincas en
+          <span className="block text-primary">Azuqueca de Henares</span>
         </h1>
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
           Gestión integral de comunidades de propietarios en Azuqueca de Henares y Guadalajara.
           Más de 15 años de experiencia respaldados por un equipo legal especializado.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg" className="text-lg px-8">
-            <Phone className="w-5 h-5 mr-2" /> Llamar Ahora
+          <Button asChild size="lg" className="text-lg px-8">
+            <a href="tel:+34949262495" className="flex items-center justify-center gap-2 no-underline">
+              <Phone className="w-5 h-5" />
+              <span>Llamar Ahora</span>
+            </a>
           </Button>
-          <Button variant="outline" size="lg" className="text-lg px-8 bg-transparent">
-            <Mail className="w-5 h-5 mr-2" /> Solicitar Presupuesto
+          <Button asChild variant="outline" size="lg" className="text-lg px-8 bg-transparent">
+            <a href="mailto:fincasdobleg@gmail.com?subject=Solicitud%20de%20presupuesto" className="flex items-center justify-center gap-2 no-underline">
+              <Mail className="w-5 h-5" />
+              <span>Solicitar Presupuesto</span>
+            </a>
           </Button>
         </div>
       </div>

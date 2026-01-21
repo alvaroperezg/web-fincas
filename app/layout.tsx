@@ -1,48 +1,68 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Source_Sans_3 as Source_Sans_Pro, Playfair_Display } from "next/font/google"
-import "./globals.css"
+import type { Metadata } from "next";
+import "./globals.css";
 
-const sourceSansPro = Source_Sans_Pro({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  display: "swap",
-  variable: "--font-source-sans-pro",
-})
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  display: "swap",
-  variable: "--font-playfair-display",
-})
+const DOMAIN = "https://www.administracionfincasazuqueca.es";
 
 export const metadata: Metadata = {
-  title: "Administración de Fincas Azuqueca - Gestión Profesional con Respaldo Legal",
+  metadataBase: new URL(DOMAIN),
+
+  title: {
+    default: "Administración de Fincas en Azuqueca de Henares | Gestión Profesional",
+    template: "%s | Administración de Fincas Azuqueca",
+  },
+
   description:
-    "Administración profesional de fincas en Azuqueca de Henares, Guadalajara. Servicios integrales de gestión inmobiliaria con respaldo legal especializado.",
-  keywords:
-    "administración fincas, Azuqueca de Henares, Guadalajara, gestión inmobiliaria, abogados, administrador fincas",
-  authors: [{ name: "Administración de Fincas Azuqueca" }],
-  creator: "Administración de Fincas Azuqueca",
-  publisher: "Administración de Fincas Azuqueca",
-  robots: "index, follow",
+    "Administración de fincas en Azuqueca de Henares y Guadalajara. Gestión profesional de comunidades de propietarios con respaldo legal. Consulta gratuita.",
+
+  alternates: {
+    canonical: "/",
+  },
+
   openGraph: {
-    title: "Administración de Fincas Azuqueca - Gestión Profesional",
-    description: "Servicios profesionales de administración de fincas en Azuqueca de Henares con respaldo legal.",
     type: "website",
+    url: DOMAIN,
+    siteName: "Administración de Fincas Azuqueca",
+    title: "Administración de Fincas en Azuqueca de Henares",
+    description:
+      "Gestión integral de comunidades de propietarios en Azuqueca de Henares y Guadalajara. Más de 15 años de experiencia.",
+    images: [
+      {
+        url: "/og-image.jpg", // pon una imagen aquí (1200x630)
+        width: 1200,
+        height: 630,
+        alt: "Administración de Fincas en Azuqueca de Henares",
+      },
+    ],
     locale: "es_ES",
   },
-}
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Administración de Fincas en Azuqueca de Henares",
+    description:
+      "Gestión profesional de comunidades de propietarios en Azuqueca y Guadalajara.",
+    images: ["/og-image.jpg"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="es" className={`${sourceSansPro.variable} ${playfairDisplay.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="es">
+      <body>{children}</body>
     </html>
-  )
+  );
 }

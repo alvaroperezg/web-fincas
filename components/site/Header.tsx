@@ -16,8 +16,9 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-6">
             <a href="#servicios" className="text-foreground hover:text-primary transition-colors">Servicios</a>
             <a href="#nosotros" className="text-foreground hover:text-primary transition-colors">Nosotros</a>
-            <a href="#contacto" className="text-foreground hover:text-primary transition-colors">Contacto</a>
-            <Button>Consulta Gratuita</Button>
+            <Button asChild>
+              <a href="#contacto">Contacta con nosotros</a>
+            </Button>
           </nav>
         </div>
       </div>

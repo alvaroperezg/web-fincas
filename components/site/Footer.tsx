@@ -2,7 +2,7 @@ import { Building2 } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-foreground text-background py-12">
+    <footer className="bg-foreground text-background pt-10">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
@@ -31,8 +31,10 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="border-t border-background/20 mt-8 pt-8 text-center text-background/60">
-          <p>&copy; {new Date().getFullYear()} Administración de Fincas Azuqueca. Todos los derechos reservados.</p>
+        <div className="border-t border-background/20 mt-8 flex items-center justify-center text-background/60 h-16">
+          <p>
+            &copy; {new Date().getFullYear()} Administración de Fincas Azuqueca. Todos los derechos reservados.
+          </p>
         </div>
       </div>
     </footer>

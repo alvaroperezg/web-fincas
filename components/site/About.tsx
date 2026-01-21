@@ -3,7 +3,7 @@ import { Shield, Users } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="nosotros" className="py-20 bg-card/30">
+    <section id="nosotros" className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -12,9 +12,6 @@ export default function About() {
             </h2>
             <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
               Más de 15 años de experiencia en administración de fincas en Azuqueca y Guadalajara.
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Equipo multidisciplinar con abogados especializados en derecho inmobiliario.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div className="text-center">
@@ -28,7 +25,7 @@ export default function About() {
             </div>
           </div>
           <div className="space-y-6">
-            <Card>
+            {/* <Card>
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-3">
                   <Users className="w-8 h-8 text-primary" />
@@ -38,7 +35,7 @@ export default function About() {
               <CardContent>
                 <p className="text-muted-foreground">Administradores colegiados y equipo legal a su servicio.</p>
               </CardContent>
-            </Card>
+            </Card> */}
             <Card>
               <CardHeader className="pb-3">
                 <div className="flex items-center gap-3">
