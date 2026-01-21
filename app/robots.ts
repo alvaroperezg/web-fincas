@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: "*", allow: "/" },
-    sitemap: "https://tu-dominio.com/sitemap.xml",
-    host: "https://tu-dominio.com",
+    sitemap: "https://fincasazuqueca.es/sitemap.xml",
+    host: "https://fincasazuqueca.es",
   };
 }
